@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exclusão de Dados — Glicemia Fácil</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --text: #1e293b;
+      --muted: #64748b;
+      --bg: #ffffff;
+      --card: #f8fafc;
+      --border: #e2e8f0;
+      --accent: #0f766e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --bg: #0f172a;
+        --card: #1e293b;
+        --border: #334155;
+        --accent: #2dd4bf;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.25;
+      margin: 0 0 8px;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin: 0 0 24px;
+      font-size: 0.95rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 28px 0 10px;
+      color: var(--accent);
+    }
+    p, li { font-size: 0.98rem; }
+    ol, ul { padding-left: 1.25rem; }
+    li { margin-bottom: 6px; }
+    .box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 16px 0;
+    }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      margin: 12px 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--card);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Exclusão de Dados</h1>
+    <p class="subtitle">
+      <strong>Glicemia Fácil</strong><br />
+      Desenvolvedor: Glicemia Fácil<br />
+      Pacote do aplicativo: <code>com.glicemiafacil.app</code><br />
+      Última atualização: 18 de junho de 2026
+    </p>
+
+    <p>
+      Esta página descreve como solicitar ou realizar a <strong>exclusão dos seus dados</strong>
+      relacionados ao aplicativo <strong>Glicemia Fácil</strong>, disponível na Google Play Store.
+      Não é necessário criar conta para usar o App.
+    </p>
+
+    <div class="box">
+      <strong>Resumo:</strong> na versão atual, seus dados de glicose ficam <strong>no aparelho</strong>.
+      Você pode apagá-los a qualquer momento nas configurações do Android ou desinstalando o App.
+      Dados de anúncios são tratados pelo <strong>Google AdMob</strong> e podem ser gerenciados
+      nas configurações do Google.
+    </div>
+
+    <h2>1. Dados no seu aparelho</h2>
+    <p>Os itens abaixo ficam armazenados <strong>localmente no dispositivo</strong> e não são enviados para servidores do desenvolvedor:</p>
+    <ul>
+      <li>medições de glicose (valores, data, hora, período, notas);</li>
+      <li>metas glicêmicas;</li>
+      <li>nome de exibição (perfil opcional);</li>
+      <li>preferências do App (tema, cores, onboarding);</li>
+      <li>configurações de lembretes locais.</li>
+    </ul>
+
+    <h3 style="font-size:1rem;margin:16px 0 8px;">Como excluir (passo a passo)</h3>
+    <ol>
+      <li>Abra <strong>Configurações</strong> do Android.</li>
+      <li>Acesse <strong>Apps</strong> → <strong>Glicemia Fácil</strong>.</li>
+      <li>Toque em <strong>Armazenamento e cache</strong> (ou <strong>Armazenamento</strong>).</li>
+      <li>Toque em <strong>Limpar dados</strong> ou <strong>Limpar armazenamento</strong>.</li>
+    </ol>
+    <p>
+      <strong>Alternativa:</strong> desinstale o App. Isso remove os dados locais do aplicativo
+      no dispositivo.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de dado</th>
+          <th>Excluído?</th>
+          <th>Observação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dados de glicose e metas no App</td>
+          <td><strong>Sim</strong></td>
+          <td>Removidos ao limpar dados ou desinstalar.</td>
+        </tr>
+        <tr>
+          <td>Perfil e preferências</td>
+          <td><strong>Sim</strong></td>
+          <td>Removidos junto com os dados do App.</td>
+        </tr>
+        <tr>
+          <td>Arquivos PDF ou backup JSON exportados por você</td>
+          <td>Parcial</td>
+          <td>Permanecem onde você salvou (Drive, e-mail, WhatsApp etc.). Exclua manualmente nesses serviços.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>2. Dados de anúncios (Google AdMob)</h2>
+    <p>
+      O App exibe anúncios fornecidos pelo <strong>Google AdMob</strong>. O Google e seus parceiros
+      podem coletar dados como identificador de publicidade, informações do dispositivo,
+      interações com anúncios e localização aproximada (via IP).
+    </p>
+    <p>Esses dados <strong>não são controlados diretamente pelo desenvolvedor do Glicemia Fácil</strong>.</p>
+
+    <h3 style="font-size:1rem;margin:16px 0 8px;">Como gerenciar ou limitar</h3>
+    <ol>
+      <li>
+        Acesse as
+        <a href="https://adssettings.google.com/" rel="noopener noreferrer" target="_blank">configurações de anúncios do Google</a>.
+      </li>
+      <li>
+        No Android, abra <strong>Configurações</strong> → <strong>Privacidade</strong> →
+        <strong>Anúncios</strong> e redefina ou exclua o <strong>ID de publicidade</strong>.
+      </li>
+      <li>
+        Consulte a
+        <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Política de Privacidade do Google</a>
+        para prazos e exclusão de dados tratados pelo Google.
+      </li>
+    </ol>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de dado</th>
+          <th>Quem trata</th>
+          <th>Prazo de retenção</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ID de publicidade, interações com anúncios</td>
+          <td>Google (AdMob)</td>
+          <td>Conforme políticas do Google</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Dados em servidores do desenvolvedor</h2>
+    <p>
+      Na versão atual do <strong>Glicemia Fácil</strong>, <strong>não armazenamos</strong> suas
+      medições de glicose em servidores próprios. Não há backup automático na nuvem ativo nesta versão.
+    </p>
+
+    <h2>4. Solicitação por e-mail</h2>
+    <p>
+      Para dúvidas ou pedidos relacionados à privacidade e exclusão de dados, entre em contato:
+    </p>
+    <p>
+      <strong>E-mail:</strong>
+      <a href="mailto:lucian.sistemas.sc@gmail.com">lucian.sistemas.sc@gmail.com</a>
+    </p>
+    <p>
+      Inclua no assunto ou na mensagem: <strong>“Exclusão de dados — Glicemia Fácil”</strong>.
+      Responderemos em prazo razoável com orientações sobre os dados que estiverem sob nosso controle.
+    </p>
+
+    <h2>5. Prazos de armazenamento</h2>
+    <ul>
+      <li><strong>Dados no aparelho:</strong> mantidos enquanto o App estiver instalado e você não apagar os dados.</li>
+      <li><strong>Arquivos exportados por você:</strong> permanecem no destino escolhido por você; não controlamos esse armazenamento.</li>
+      <li><strong>Dados do AdMob:</strong> conforme políticas e prazos do Google.</li>
+      <li><strong>Exclusão automática em 90 dias:</strong> não aplicável — não mantemos cópia dos seus dados de saúde em servidor próprio nesta versão.</li>
+    </ul>
+
+    <footer>
+      <p>
+        <a href="index.html">← Política de Privacidade</a>
+      </p>
+      <p>© 2026 Glicemia Fácil · Exclusão de Dados</p>
+    </footer>
+  </main>
+</body>
+</html>
