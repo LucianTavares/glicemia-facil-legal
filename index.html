@@ -78,7 +78,7 @@
     <p class="subtitle">
       <strong>Glicemia Fácil</strong><br />
       Pacote do aplicativo: <code>com.glicemiafacil.app</code><br />
-      Última atualização: 8 de novembro de 2026
+      Última atualização: 10 de novembro de 2026
     </p>
 
     <p>
@@ -90,11 +90,14 @@
     <div class="box">
       <strong>Resumo:</strong> seus dados de glicose e preferências ficam principalmente
       <strong>no seu aparelho</strong>. Você tem controle sobre seus dados e pode excluí-los
-      a qualquer momento diretamente no seu dispositivo. Não operamos servidores próprios para
-      armazenar suas medições na versão atual. O App exibe <strong>anúncios</strong> por meio do
-      Google AdMob, que pode coletar dados conforme a política do Google. O App envia
-      <strong>estatísticas de uso</strong> ao PostHog, sem valores de glicose, notas, metas,
-      nome ou qualquer dado de saúde. O App <strong>não substitui</strong> orientação médica.
+      a qualquer momento diretamente no seu dispositivo. Sem o Premium, não há conta nem login.
+      Se você assinar o <strong>Glicemia Fácil Premium</strong> (opcional), entra com sua conta
+      Google e pode fazer <strong>backup na nuvem</strong>: os registros são cifrados no próprio
+      aparelho antes do envio, e o servidor não consegue lê-los. Quem não assina vê
+      <strong>anúncios</strong> do Google AdMob, que pode coletar dados conforme a política do
+      Google. O App envia <strong>estatísticas de uso</strong> ao PostHog, sem valores de glicose,
+      notas, metas, nome ou qualquer dado de saúde. O App <strong>não é um dispositivo
+      médico</strong> e <strong>não substitui</strong> orientação médica.
     </div>
 
     <h2>1. Quem somos</h2>
@@ -104,14 +107,16 @@
     </p>
     <p>
       <strong>Contato para privacidade:</strong>
-      <a href="mailto:lucian.sistemas.sc@gmail.com">lucian.sistemas.sc@gmail.com</a>
+      <a href="mailto:suporte@glicemiafacil.app">suporte@glicemiafacil.app</a>
     </p>
 
     <h2>2. Finalidade do App</h2>
     <p>
       O App permite registrar medições de glicose, configurar metas, visualizar histórico e
-      gráficos, exportar relatórios em PDF e fazer backup manual dos dados. Ele é destinado
-      apenas ao <strong>registro e acompanhamento pessoal</strong> e
+      gráficos, exportar relatórios em PDF e fazer backup manual dos dados. Com o
+      <strong>Glicemia Fácil Premium</strong> (assinatura opcional), também permite fazer backup
+      cifrado na nuvem. Ele é destinado apenas ao <strong>registro e acompanhamento
+      pessoal</strong>, <strong>não é um dispositivo médico</strong> e
       <strong>não fornece aconselhamento médico</strong>, diagnóstico ou tratamento.
     </p>
 
@@ -124,6 +129,8 @@
       <li><strong>Preferências do App:</strong> tema, esquema de cores, conclusão do onboarding.</li>
       <li><strong>Lembretes:</strong> horários e períodos para notificações locais, se você ativar essa função.</li>
       <li><strong>Dados técnicos no dispositivo:</strong> informações necessárias para o funcionamento do App (armazenamento local).</li>
+      <li><strong>Conta Google (só no Premium):</strong> nome, e-mail e identificador da conta, tratados pelo Firebase Authentication (seção 4.4).</li>
+      <li><strong>Dados da assinatura (só no Premium):</strong> plano, estado e data de fim da assinatura (seção 4.5).</li>
     </ul>
     <p>
       Esses dados são considerados <strong>sensíveis</strong> por tratarem de informações
@@ -131,13 +138,13 @@
     </p>
 
     <h2>4. Onde os dados ficam armazenados</h2>
-    <h3 style="font-size:1rem;margin:16px 0 8px;">4.1 Armazenamento local (versão atual)</h3>
+    <h3 style="font-size:1rem;margin:16px 0 8px;">4.1 Armazenamento local</h3>
     <p>
-      Na versão atual do App, os dados listados acima são armazenados
+      Os registros de glicose, metas, perfil, preferências e lembretes são armazenados
       <strong>localmente no seu aparelho</strong>, no armazenamento interno do aplicativo.
       <strong>Você tem controle sobre seus dados e pode excluí-los a qualquer momento
-      diretamente no seu dispositivo.</strong> <strong>Não enviamos suas medições para
-      servidores próprios</strong> e não exigimos criação de conta para usar o App.
+      diretamente no seu dispositivo.</strong> Sem o Premium, <strong>nenhum registro é enviado
+      para servidores</strong> e não há conta nem login.
     </p>
     <p>
       Se você <strong>desinstalar</strong> o App ou <strong>limpar os dados</strong> do
@@ -157,26 +164,75 @@
       seguro e evite compartilhá-lo com pessoas não autorizadas.
     </p>
 
-    <h3 style="font-size:1rem;margin:16px 0 8px;">4.3 Backup na nuvem (recurso futuro)</h3>
+    <h3 style="font-size:1rem;margin:16px 0 8px;">4.3 Glicemia Fácil Premium (opcional)</h3>
     <p>
-      Podemos oferecer no futuro um serviço opcional pago de backup na nuvem (ex.: assinatura
-      “Glicemia Plus”). Se e quando esse recurso estiver disponível, esta política será
-      atualizada para descrever quais dados são enviados, onde são armazenados, por quanto
-      tempo e como solicitar exclusão. <strong>Na versão descrita neste documento, o backup
-      automático na nuvem não está ativo.</strong>
+      O <strong>Glicemia Fácil Premium</strong> é uma assinatura opcional. Quem não assina
+      continua usando o App sem conta e com os registros só no aparelho. As seções 4.4 a 4.6
+      valem apenas para quem assina.
+    </p>
+
+    <h3 style="font-size:1rem;margin:16px 0 8px;">4.4 Conta Google</h3>
+    <p>
+      Para usar o Premium, você entra com sua conta Google pelo
+      <strong>Firebase Authentication</strong>, do Google. O Firebase guarda seu
+      <strong>nome</strong>, <strong>e-mail</strong> e um <strong>identificador da conta</strong>.
+      O servidor do App guarda <strong>só o identificador</strong>, não o seu e-mail.
+    </p>
+    <p>
+      <strong>Finalidade:</strong> identificar o titular do backup e da assinatura.
+      <strong>Base legal (LGPD):</strong> execução de contrato.
+    </p>
+
+    <h3 style="font-size:1rem;margin:16px 0 8px;">4.5 Assinatura</h3>
+    <p>
+      O pagamento é feito e processado pela <strong>Google Play</strong>. O App
+      <strong>não recebe dados de cartão</strong> nem outros dados de pagamento. Para liberar o
+      Premium, o servidor guarda um código derivado da compra (não a compra em si), o plano, o
+      estado e a data de fim da assinatura.
+    </p>
+
+    <h3 style="font-size:1rem;margin:16px 0 8px;">4.6 Backup na nuvem</h3>
+    <ul>
+      <li>
+        Os registros são <strong>cifrados no próprio aparelho</strong> com AES-256-GCM, com uma
+        chave que só a <strong>senha do backup</strong> ou o <strong>código de recuperação</strong>
+        abrem.
+      </li>
+      <li>
+        O servidor recebe apenas o <strong>conteúdo cifrado</strong> e metadados técnicos
+        (tamanho, código de integridade, datas e número da cópia) e <strong>não consegue ler os
+        registros</strong>.
+      </li>
+      <li>Ficam guardadas as <strong>3 cópias mais recentes</strong>.</li>
+      <li>
+        Se você perder a senha do backup e o código de recuperação, as cópias
+        <strong>não podem ser recuperadas por ninguém</strong>, nem pela nossa equipe.
+      </li>
+    </ul>
+
+    <h3 style="font-size:1rem;margin:16px 0 8px;">4.7 Onde ficam os dados do servidor</h3>
+    <p>
+      Os dados do servidor do App (identificador da conta, dados da assinatura e cópias cifradas)
+      ficam em servidores da <strong>Cloudflare</strong> (Workers, D1 e R2) nos
+      <strong>Estados Unidos</strong>. Os operadores desses dados são a Cloudflare e o Google
+      (Firebase e Google Play), cada um com sua própria política de privacidade:
+      <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer" target="_blank">Cloudflare</a>
+      e <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google</a>.
+      Veja também a seção 14 (transferência internacional).
     </p>
 
     <h2>5. Permissões do dispositivo</h2>
     <ul>
       <li><strong>Notificações:</strong> usadas apenas para lembretes de medição que você configurar. Você pode desativar nas configurações do App ou do Android.</li>
       <li><strong>Armazenamento / arquivos:</strong> usados quando você exporta PDF ou backup, para gerar e compartilhar arquivos mediante sua ação.</li>
-      <li><strong>Internet:</strong> necessária para exibir anúncios (AdMob), enviar estatísticas de uso (PostHog, conforme seção 7) e para atualizações do App obtidas pela loja de aplicativos.</li>
+      <li><strong>Internet:</strong> necessária para exibir anúncios (AdMob), enviar estatísticas de uso e relatórios de falhas (seção 7), usar o Premium (login, assinatura e backup na nuvem) e para atualizações do App obtidas pela loja de aplicativos.</li>
     </ul>
 
     <h2>6. Anúncios (Google AdMob)</h2>
     <p>
-      O App é gratuito e pode exibir <strong>anúncios em banner</strong> em algumas telas,
-      fornecidos pelo <strong>Google AdMob</strong> (Google LLC).
+      Para quem não assina o Premium, o App pode exibir <strong>anúncios em banner</strong> em
+      algumas telas, fornecidos pelo <strong>Google AdMob</strong> (Google LLC). Assinantes do
+      Premium não veem anúncios.
     </p>
     <p>
       O AdMob e seus parceiros podem coletar e usar dados, como:
@@ -197,7 +253,8 @@
     <p>
       <strong>Não vendemos</strong> seus dados de glicose a anunciantes. Os anúncios são
       exibidos por um serviço de terceiros; suas medições registradas no App permanecem
-      no dispositivo, salvo quando você exporta ou compartilha arquivos por conta própria.
+      no dispositivo, salvo quando você exporta ou compartilha arquivos por conta própria ou usa
+      o backup cifrado do Premium, que o servidor não consegue ler.
     </p>
     <p>
       Para mais informações, consulte a
@@ -251,13 +308,28 @@
       como ocorre em qualquer conexão pela internet.
     </p>
 
+    <h3 style="font-size:1rem;margin:16px 0 8px;">Firebase Analytics e Crashlytics</h3>
+    <p>
+      O App também usa o <strong>Firebase Analytics</strong> e o <strong>Firebase
+      Crashlytics</strong>, do Google, para estatísticas de uso e relatórios de falhas, que
+      ajudam a corrigir erros. Esses dados são tratados pelo Google conforme a
+      <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Política de Privacidade do Google</a>.
+    </p>
+
+    <h3 style="font-size:1rem;margin:16px 0 8px;">Feedback por e-mail</h3>
+    <p>
+      Se você nos enviar feedback por e-mail, recebemos o conteúdo da mensagem e o seu endereço
+      de e-mail, usados apenas para responder.
+    </p>
+
     <h2>8. Compartilhamento com terceiros</h2>
     <p>Podemos compartilhar informações apenas nas situações abaixo:</p>
     <ul>
       <li><strong>Google AdMob:</strong> para exibição de anúncios (conforme seção 6).</li>
       <li><strong>PostHog:</strong> como operador (prestador de serviço) de estatísticas de uso (conforme seção 7).</li>
-      <li><strong>Google Play:</strong> para distribuição, atualizações e, se aplicável, processamento de compras futuras na loja.</li>
-      <li><strong>Provedores de infraestrutura futuros</strong> (ex.: serviços de nuvem), somente se um recurso correspondente for lançado e descrito nesta política.</li>
+      <li><strong>Firebase (Google):</strong> Analytics e Crashlytics (seção 7) e, no Premium, login com a conta Google (seção 4.4).</li>
+      <li><strong>Google Play:</strong> para distribuição, atualizações e processamento do pagamento da assinatura Premium (seção 4.5).</li>
+      <li><strong>Cloudflare:</strong> como operador de infraestrutura do servidor do Premium (seção 4.7), que guarda o identificador da conta, os dados da assinatura e as cópias cifradas do backup.</li>
       <li><strong>Obrigação legal:</strong> se exigido por lei, ordem judicial ou autoridade competente.</li>
     </ul>
     <p><strong>Não vendemos</strong> seus dados pessoais.</p>
@@ -267,7 +339,7 @@
       Se você estiver no Brasil, o tratamento de dados pessoais é realizado com base em:
     </p>
     <ul>
-      <li><strong>Execução do contrato / prestação do serviço:</strong> para operar as funções do App que você solicita.</li>
+      <li><strong>Execução do contrato / prestação do serviço:</strong> para operar as funções do App que você solicita, incluindo, no Premium, a conta Google, a assinatura e o backup na nuvem.</li>
       <li><strong>Consentimento:</strong> quando você ativa lembretes, exporta arquivos ou aceita anúncios conforme as opções do sistema e do App.</li>
       <li><strong>Legítimo interesse:</strong> para melhorar a segurança e o funcionamento do App, respeitando seus direitos.</li>
       <li><strong>[BASE LEGAL DO POSTHOG]:</strong> para as estatísticas de uso descritas na seção 7.</li>
@@ -279,21 +351,43 @@
 
     <h2>10. Seus direitos</h2>
     <p>
-      Nos termos da LGPD e de leis aplicáveis, você pode solicitar, quando cabível:
+      Nos termos do art. 18 da LGPD, você pode solicitar, quando cabível:
     </p>
     <ul>
       <li>confirmação de tratamento e acesso aos dados;</li>
-      <li>correção de dados incompletos ou desatualizados;</li>
+      <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+      <li>anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a lei;</li>
+      <li>portabilidade dos dados;</li>
       <li>eliminação de dados tratados com base no consentimento;</li>
-      <li>informações sobre compartilhamento.</li>
+      <li>informações sobre compartilhamento;</li>
+      <li>informação sobre a possibilidade de não consentir e suas consequências;</li>
+      <li>revogação do consentimento.</li>
     </ul>
+    <p>
+      Se você estiver fora do Brasil, tem os direitos equivalentes previstos no GDPR (Regulamento
+      Geral de Proteção de Dados da União Europeia), como acesso, correção, exclusão,
+      portabilidade e oposição ao tratamento.
+    </p>
     <p>
       Para dados armazenados <strong>localmente</strong>, você pode excluí-los desinstalando o
       App ou apagando os dados do aplicativo. Instruções detalhadas estão na página
       <a href="exclusao-de-dados.html">Exclusão de Dados</a>.
-      Para pedidos relacionados a esta política, envie e-mail para
-      <a href="mailto:lucian.sistemas.sc@gmail.com">lucian.sistemas.sc@gmail.com</a>.
+      Para exercer seus direitos, envie e-mail para
+      <a href="mailto:suporte@glicemiafacil.app">suporte@glicemiafacil.app</a>.
     </p>
+
+    <h3 style="font-size:1rem;margin:16px 0 8px;">Exclusão da conta Premium</h3>
+    <p>
+      Você pode excluir sua conta pelo App, em <strong>Configurações → Dados → Glicemia Fácil
+      Premium → Gerenciar backup → Excluir conta e backups</strong>, ou pelo e-mail
+      <a href="mailto:suporte@glicemiafacil.app">suporte@glicemiafacil.app</a>
+      (veja <a href="exclusao-de-conta.html">Excluir sua conta</a>).
+    </p>
+    <ul>
+      <li><strong>O que é apagado:</strong> a conta, as cópias na nuvem, a chave do backup e o vínculo da assinatura no servidor, e o login no Firebase.</li>
+      <li><strong>O que fica:</strong> os registros no seu aparelho continuam com você.</li>
+      <li><strong>Assinatura:</strong> a exclusão não cancela a assinatura. Cancele na Google Play.</li>
+    </ul>
 
     <h2>11. Retenção</h2>
     <ul>
@@ -301,12 +395,16 @@
       <li><strong>Arquivos exportados por você:</strong> permanecem onde você os salvar; não controlamos esse armazenamento.</li>
       <li><strong>Dados do AdMob:</strong> conforme políticas e prazos do Google.</li>
       <li><strong>Estatísticas de uso (PostHog):</strong> [PRAZO DE RETENÇÃO DO POSTHOG].</li>
+      <li><strong>Cópias do backup na nuvem (Premium):</strong> apagadas 30 dias depois do fim da assinatura. O App avisa antes, na tela e por notificação 7 dias antes.</li>
+      <li><strong>Conta, chave do backup e vínculo da assinatura (Premium):</strong> mantidos enquanto a conta existir; apagados na hora quando você exclui a conta.</li>
+      <li><strong>Registros técnicos do servidor:</strong> podem ficar por poucos dias, sem dados de saúde.</li>
     </ul>
 
     <h2>12. Segurança</h2>
     <p>
-      Adotamos práticas razoáveis para proteger os dados no contexto de um aplicativo
-      local. Nenhum método é 100% seguro. Recomendamos manter o aparelho protegido por senha
+      Adotamos práticas razoáveis para proteger os dados. No Premium, o backup é cifrado no
+      aparelho antes do envio (seção 4.6) e todas as comunicações com o servidor usam conexão
+      criptografada. Nenhum método é 100% seguro. Recomendamos manter o aparelho protegido por senha
       ou biometria e não compartilhar backups exportados em locais públicos.
     </p>
 
@@ -330,11 +428,17 @@
       (<code>us.i.posthog.com</code>). Essa transferência internacional de dados é feita
       nos termos do art. 33 da LGPD.
     </p>
+    <p>
+      No Premium, os dados do servidor do App ficam na <strong>Cloudflare</strong> (Workers, D1
+      e R2), nos <strong>Estados Unidos</strong>, e a conta Google é tratada pelo Firebase
+      (Google). O Firebase Analytics e o Crashlytics também podem processar dados fora do Brasil.
+      Essas transferências internacionais também são feitas nos termos do art. 33 da LGPD.
+    </p>
 
     <h2>15. Alterações nesta política</h2>
     <p>
       Podemos atualizar esta Política de Privacidade para refletir mudanças no App (por
-      exemplo, novos recursos como backup na nuvem ou alterações em anúncios). A data da
+      exemplo, novos recursos ou alterações em anúncios). A data da
       última atualização será indicada no topo desta página. Alterações relevantes podem
       também ser comunicadas por meio da descrição da atualização na Google Play Store.
     </p>
@@ -342,11 +446,11 @@
     <h2>16. Contato</h2>
     <p>
       Dúvidas sobre esta política ou sobre seus dados:
-      <a href="mailto:lucian.sistemas.sc@gmail.com">lucian.sistemas.sc@gmail.com</a>
+      <a href="mailto:suporte@glicemiafacil.app">suporte@glicemiafacil.app</a>
     </p>
 
     <footer>
-      <p><a href="exclusao-de-dados.html">Exclusão de Dados</a></p>
+      <p><a href="exclusao-de-dados.html">Exclusão de Dados</a> · <a href="exclusao-de-conta.html">Excluir sua conta</a></p>
       © 2026 Glicemia Fácil · Política de Privacidade
     </footer>
   </main>

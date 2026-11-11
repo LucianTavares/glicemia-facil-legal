@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excluir sua conta — Glicemia Fácil</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --text: #1e293b;
+      --muted: #64748b;
+      --bg: #ffffff;
+      --card: #f8fafc;
+      --border: #e2e8f0;
+      --accent: #0f766e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --bg: #0f172a;
+        --card: #1e293b;
+        --border: #334155;
+        --accent: #2dd4bf;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.25;
+      margin: 0 0 8px;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin: 0 0 24px;
+      font-size: 0.95rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 28px 0 10px;
+      color: var(--accent);
+    }
+    p, li { font-size: 0.98rem; }
+    ol, ul { padding-left: 1.25rem; }
+    li { margin-bottom: 6px; }
+    .box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 16px 0;
+    }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      margin: 12px 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--card);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Excluir sua conta e seus backups do Glicemia Fácil</h1>
+    <p class="subtitle">
+      <strong>Glicemia Fácil</strong><br />
+      Pacote do aplicativo: <code>com.glicemiafacil.app</code><br />
+      Última atualização: 10 de novembro de 2026
+    </p>
+
+    <div class="box">
+      <strong>Não usa o Premium?</strong> Então você não tem conta: seus registros ficam só no
+      aparelho. Para apagá-los, veja a página <a href="exclusao-de-dados.html">Exclusão de Dados</a>.
+    </div>
+
+    <h2>Pelo app (mais rápido)</h2>
+    <ol>
+      <li>Abra o Glicemia Fácil.</li>
+      <li>Vá em <strong>Configurações → Dados → Glicemia Fácil Premium → Gerenciar backup</strong>.</li>
+      <li>Toque em <strong>Excluir conta e backups</strong>.</li>
+      <li>Confirme a sua conta Google quando o app pedir.</li>
+    </ol>
+
+    <h2>Sem o app</h2>
+    <p>
+      Envie um e-mail para
+      <a href="mailto:suporte@glicemiafacil.app?subject=Excluir%20minha%20conta">suporte@glicemiafacil.app</a>
+      a partir do <strong>e-mail da conta Google usada no app</strong>, com o assunto
+      <strong>“Excluir minha conta”</strong>. A exclusão é concluída em até 30 dias, e você
+      recebe a confirmação por e-mail.
+    </p>
+
+    <h2>O que é apagado</h2>
+    <ul>
+      <li>a sua conta;</li>
+      <li>todas as cópias do backup na nuvem;</li>
+      <li>a chave do backup;</li>
+      <li>o vínculo da assinatura no servidor;</li>
+      <li>o login (conta no Firebase Authentication).</li>
+    </ul>
+
+    <h2>O que fica</h2>
+    <ul>
+      <li>
+        <strong>Os registros no seu celular.</strong> Eles continuam com você. Para apagá-los,
+        desinstale o app (veja <a href="exclusao-de-dados.html">Exclusão de Dados</a>).
+      </li>
+      <li>
+        <strong>A assinatura.</strong> Ela não é cancelada automaticamente. Cancele na Google Play,
+        em <strong>Pagamentos e assinaturas</strong>.
+      </li>
+    </ul>
+
+    <footer>
+      <p>
+        <a href="index.html">← Política de Privacidade</a> ·
+        <a href="exclusao-de-dados.html">Exclusão de Dados</a>
+      </p>
+      <p>© 2026 Glicemia Fácil · Excluir sua conta</p>
+    </footer>
+  </main>
+</body>
+</html>
